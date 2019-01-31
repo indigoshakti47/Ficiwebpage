@@ -1,386 +1,393 @@
-<?php
-// Se conecta
-include 'php_scripts/dbc.php';  
-session_start();
-
-$inicio = false;
-
-if(isset($_SESSION['loged-in'])){
-    if(!empty($_SESSION['loged-in'])){
-        $inicio = true;
-    }
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>FICI</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+        <link href="img/ficilogo.png" rel="icon">
+        <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i"
+            rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+            <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            <link href="lib/animate/animate.min.css" rel="stylesheet">
+            <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+            <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+            <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+            <link href="css/style.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+            <link rel="stylesheet" href="css/style2.css">
+            <link rel="stylesheet" href="css/whatsapp.css">
 
-<head>
-    <meta charset="utf-8">
-    <title>FICI</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <link href="" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i"
-        rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <link href="js/Date/bootstrap/css/icon.css" rel="stylesheet" media="screen">
-    <link href="js/Date/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="css/whatsapp.css">
-
-</head>
-
-<body>
-
-
-  <header id="header">
-    <div class="container" style="margin-top:-0.5%">
-
-      <div id="logo" class="pull-left">
-        <h1><a href="#intro" class=""><img src="img/fici.png" alt="" style="width:30%;height: 100%;margin-right: 0.5em;">Fici</a></h1>
-      </div>
-
-      <nav id="nav-menu-container" style="margin-top:-5%; ">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="index.html">Home</a></li>
-          <li><a href="#about">Quiénes somos</a></li>
-          <li><a href="#features">Beneficios</a></li>
-          <li><a href="#pricing">Servicios</a></li>
-          <li><a href="#call-to-action">Reserva</a></li>
-          <li><a href="#contact">Contáctanos</a></li>
-          <li class="menu-has-children"><a href="#intro">Ingresa</a>
-            <ul>
-              <li><a href="login.html#about">Ingresa</a></li>
-              <li class="menu-has-children"><a href="registro.html#about">Regístrate</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-    </div>
-  </header><!-- #header -->
-
-    <!--==========================
-    Intro Section
-  ============================-->
-    <section id="intro">
-
-        <div class="intro-text" style="margin-top:6%">
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-
-
-        </div>
-
-    </section><!-- #intro -->
-
-    <main id="main">
-
-        <!--==========================
-      About Us Section
-    ============================-->
-
-    <?php
-        if($inicio){
-    ?>
-        <section id="about" class="section-bg">
-            <div class="container-fluid">
-                <div class="section-header">
-                    <h3 class="section-title">Reserva</h3>
-                    <span class="section-divider"></span>
-
-                    <form action="php_scripts/reservar.php" method="post" class="col-lg-5 mx-auto">
-                        
-                        <div class="form-group">
-                                <label for="formGroupExampleInput2"><b>FECHA Y HORA</b></label>
-                                <div class="input-group date form_datetime col-lg-12" data-date="2018-12-19T10:30:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-                                        <input class="form-control" id="FyH" name="FyH" size="5" type="text" value="" readonly>
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span><i class="fas fa-calendar-times boton"></i></span>
-                              <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span><i class="fas fa-times botonX"></i></span>
+            
+        </head>
+        <body>
+            <header id="header">
+                <div class="container" style="margin-top:-0.5%">
+                    <div id="logo" class="pull-left">
+                        <h1><a href="#intro" class=""><img src="img/fici.png" alt="" style="width:30%;height: 100%;margin-right: 0.5em;">Fici</a></h1>
+                    </div>
+                    <nav id="nav-menu-container" style="margin-top:-5%; ">
+                        <ul class="nav-menu">
+                            <li class="menu-active"><a href="index.html">Home</a></li>
+                            <li><a href="#about">Quiénes somos</a></li>
+                            <li><a href="#features">Beneficios</a></li>
+                            <li><a href="#pricing">Servicios</a></li>
+                            <li><a href="#call-to-action">Reserva</a></li>
+                            <li><a href="#contact">Contáctanos</a></li>
+                            <li class="menu-has-children"><a href="#intro">Ingresa</a>
+                            <ul>
+                                <li><a href="login.html#about">Ingresa</a></li>
+                                <li class="menu-has-children"><a href="registro.html#about">Regístrate</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </nav><!-- #nav-menu-container -->
+                </div>
+                </header><!-- #header -->
+                <!--==========================
+                Intro Section
+                ============================-->
+                <section id="intro">
+                    <div class="intro-text" style="margin-top:6%">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    </section><!-- #intro -->
+                    <main id="main">
+                        <!--==========================
+                        About Us Section
+                        ============================-->
+                        <div class="section-header">
+                            <h3 class="section-title">Reserva</h3>
+                            <span class="section-divider"></span>
+                            <form action="#" id="booking-form">
+                                
+                                <div class="tab-content">
+                                    <!-- Primera pantalla -->
+                                    <div class="tab-pane" id="step1">
+                                        <ul>
+                                            <li>
+                                                <label>CIUDAD O MUNICIPIO</label>
+                                                <div class="errorTxt"></div>
+                                                <select name="bf_totalGuests" required>
+                                                    <option value="">Seleccione</option>
+                                                    <option value="1">Bogotá</option>
+                                                    <option value="2">Cajicá</option>
+                                                    <option value="3">Chía</option>
+                                                    <option value="4">Cota</option>
+                                                    <option value="5">Cogua</option>
+                                                    <option value="6">Sopó</option>
+                                                    <option value="7">Tabio</option>
+                                                    <option value="8">Tocancipá</option>
+                                                    <option value="9">Zipaquirá</option>
+                                                </select>
+                                            </li>
+                                            <ul>
+                                                <li>
+                                                    <label>¿EN QUÉ FECHA TE GUSTARÍA AGENDAR TU CITA?</label>
+                                                    <div class="errorTxt"></div>
+                                                    <input class="form-control" type="date" required>
+                                                </li>
+                                                <li>
+                                                    <label>¿A QUÉ HORA?</label>
+                                                    <div class="errorTxt"></div>
+                                                    <input class="form-control" type="time" required>
+                                                </li>
+                                                
+                                                
+                                                <li style="list-style: none; display: inline">
+                                                    <button class="next-btn next-btn1" type="button">Next</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Segunda pantalla -->
+                                        <div class="tab-pane" id="step2">
+                                            <ul>
+                                                
+                                                <li>
+                                                    <label>Qué tipo de terapia quieres reservar?</label>
+                                                    <div class="errorTxt"></div>
+                                                    <select name="bf_hours">
+                                                        <option value="">Seleccione</option>
+                                                        <option value="3">Activación</option>
+                                                        <option value="4">Recuperación</option>
+                                                        <option value="5">Tratamiento de lesiones</option>
+                                                        
+                                                    </select>
+                                                </li>
+                                                <!--info dirección comienzo -->
+                                                <div class="form-group">
+                                                    <label for="formGroupExampleInput2"><b>DESEEA INCORPORAR DIRECCION REGISTRADA</b></label><br/>
+                                                    <select class="custom-select" id="camb" >
+                                                        <div class="inputDiv">
+                                                            <option value="1">SI</option>
+                                                            <option value="2">NO</option>
+                                                        </select>
+                                                        <br/><div id="dir"></div>
+                                                        <input type="text" id="direccio" name="direccio" class="form-control" readonly="readonly" name="direccion" value="<?php echo $_SESSION['Direccion']; ?>"></input>
+                                                        <br/><div id="ciu"></div>
+                                                        <select class="custom-select" disabled="disabled" id="ciud" name="ciud">
+                                                            <option value="Bogota"    <?php if($_SESSION['Ciudad'] == 'Bogota'){    ?> selected <?php }?>>Bogotá</option>
+                                                            <option value="Cajicá"    <?php if($_SESSION['Ciudad'] == 'Cajica'){    ?> selected <?php }?>>Cajicá</option>
+                                                            <option value="Chia"      <?php if($_SESSION['Ciudad'] == 'Chia'){      ?> selected <?php }?>>Chía</option>
+                                                            <option value="Cota"      <?php if($_SESSION['Ciudad'] == 'Cota'){      ?> selected <?php }?>>Cota</option>
+                                                            <option value="Cogua"     <?php if($_SESSION['Ciudad'] == 'Cogua'){     ?> selected <?php }?>>Cogua</option>
+                                                            <option value="Sopo"      <?php if($_SESSION['Ciudad'] == 'Sopo'){      ?> selected <?php }?>>Sopó</option>
+                                                            <option value="Tabio"     <?php if($_SESSION['Ciudad'] == 'Tabio'){     ?> selected <?php }?>>Tabio</option>
+                                                            <option value="Togancipa" <?php if($_SESSION['Ciudad'] == 'Togancipa'){ ?> selected <?php }?>>Tocancipá</option>
+                                                            <option value="Zipaquira" <?php if($_SESSION['Ciudad'] == 'Zipaquira'){ ?> selected <?php }?>>Zipaquirá</option>
+                                                        </select>
+                                                        <br/><div id="bar"></div>
+                                                        <input type="text" id="barri" name="barri" class="form-control" readonly="readonly" name="barri" value="<?php echo $_SESSION['Barrio']; ?>"></input>
+                                                        <br/><div id="ref"></div>
+                                                        <textarea class="form-control" id="refer" name="refer" name="refer" readonly="readonly" value="<?php echo $_SESSION['Referencias']; ?>" rows="5" data-rule="required" data-msg="Favor escriba referencias del sector"><?php echo $_SESSION['Referencias']; ?></textarea>
+                                                    </div>
+                                                
+                                                <li>
+                                                <button class="next-btn next-btn2" type="button">Next</button>
+                                            </li>
+                                            </div>
+                                            <script type="text/javascript">//SCRIPT PARA GUARDAR
+                                            var elInpu = document.querySelector('#camb');
+                                            var direcc=document.querySelector('#direccio');
+                                            var ciudad=document.querySelector('#ciud');
+                                            var barrio=document.querySelector('#barri');
+                                            var referencias=document.querySelector('#refer');
+                                            
+                                            if(elInpu)
+                                            {
+                                            dir.innerHTML="<b>DIRECCIÓN ACTUAL:</b>";
+                                            ciu.innerHTML="<b>CIUDAD ACTUAL:</b>";
+                                            bar.innerHTML="<b>BARRIO ACTUAL:</b>";
+                                            ref.innerHTML="<b>REFERENCIAS DEL SECTOR ACTUALES:</b>";
+                                            elInpu.addEventListener('input', function() {
+                                            if(elInpu.value=="1"){
+                                            //Direccion
+                                            direcc.value="<?php echo $_SESSION['Direccion']; ?>";
+                                            direcc.setAttribute("readonly" , "readonly" , false);
+                                            dir.innerHTML="<b>DIRECCIÓN ACTUAL:</b>";
+                                            //Ciudad
+                                            ciudad.setAttribute("disabled" , "disabled" , false);
+                                            ciu.innerHTML="<b>CIUDAD ACTUAL:</b>";
+                                            //Barrio
+                                            barrio.value="<?php echo $_SESSION['Barrio']; ?>";
+                                            barrio.setAttribute("readonly" , "readonly" , false);
+                                            bar.innerHTML="<b>BARRIO ACTUAL:</b>";
+                                            //Referencias
+                                            referencias.value="<?php echo $_SESSION['Referencias']; ?>";
+                                            referencias.setAttribute("readonly" , "readonly" , false);
+                                            ref.innerHTML="<b>REFERENCIAS DEL SECTOR ACTUALES:</b>";
+                                            }
+                                            else
+                                            {
+                                            //Direccion
+                                            direcc.value="";
+                                            direcc.removeAttribute("readonly"  , false);
+                                            dir.innerHTML="<b>NUEVA DIRECCIÓN:</b>";
+                                            //Ciudad
+                                            ciudad.removeAttribute("disabled"  , false);
+                                            ciu.innerHTML="<b>NUEVA CIUDAD:</b>";
+                                            //Barrio
+                                            barrio.value="";
+                                            barrio.removeAttribute("readonly"  , false);
+                                            bar.innerHTML="<b>NUEVO BARRIO:</b>";
+                                            //Referencias
+                                            referencias.value="";
+                                            referencias.removeAttribute("readonly"  , false);
+                                            ref.innerHTML="<b>NUEVAS REFERENCIAS DEL SECTOR:</b>";
+                                            }
+                                            }, false);
+                                            }
+                                            </script>
+                                            <!-- Info dirección -->
+                                            
+                                        </ul>
                                     </div>
+                                    <!-- Tercera pantalla -->
+                                    
+                                    <div class="tab-pane" id="step3">
+                                        <ul>
+                                            <li>
+                                                <div class="form-group">
+                                                    <label for="formGroupExampleInput2N"><b>SELECCIONE TIPO DE PAGO</b></label><br/>
+                                                    <label>Efectivo</label><input type="radio" name="">
+                                                    <label>PayU</label><input type="radio" name="">
+                                                    </input>
+                                                </div>
+                                                <label>CÓDIGO DE DESCUENTO</label>
+                                                <div class="errorTxt"></div>
+                                                <input type="text" name="bf_fullname">
+                                            </li>
+                                            
+                                            
+                                            <li>
+                                                <button class="submit-btn" type="submit">Enviar</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--Fin pantallas -->
+                                    
+                                    <div class="progress-wrap">
+                                        <div class="line-progress-bar">
+                                            <div class="line"></div>
+                                            <ul class="checkout-bar">
+                                                <li class="progressbar-dots active"><span>step 1</span></li>
+                                                <li class="progressbar-dots"><span>step 2</span></li>
+                                                <li class="progressbar-dots"><span>Final step</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="loader" style="display: none;">
+                                        <img src="//d2erq0e4xljvr7.cloudfront.net/assets/img/ring.svg">
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                    <label for="formGroupExampleInput2"><b>TIPO DE TERAPIA</b></label>
-                                    <select class="custom-select" name= "TipoT" id="TipoT">
-                                        <option selected>Elige...</option>
-                                        <option value="Activacion">Activación</option>
-                                        <option value="Recuperacion">Recuperación</option>
-                                        <option value="Tratamiento de Lesiones">Tratamiento de Lesiones</option>
-                                        <option value="Entrenamiento">Entrenamiento</option>
-                                    </select>
+                            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js'></script>
+                            <script  src="js/index.js"></script>
+
+                            <section id="contact">
+                                <div class="container">
+                                    <div class="row wow fadeInUp">
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="contact-about">
+                                                <h3>Fici</h3>
+                                                <p>Si tienes alguna duda, ponemos a tú disposición un equipo de profesionales en Fisioterapia que resolverá tus inquietudes, comunícate con nosotros por nuestros diferentes canales y responderemos en la mayor brevedad posible.</p>
+                                                <div class="social-links">
+                                                    <a href="https://wa.me/573054813575?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20agendar%20una%20terapia%20de" class="twitter" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                                                    <a href="https://www.facebook.com/ficiadomicilio/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                                    <a href="https://www.instagram.com/ficiadomicilio/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-4">
+                                            <div class="info">
+                                                <div>
+                                                    <i class="ion-ios-location-outline"></i>
+                                                    <p>En cualquier lugar<br></p>
+                                                </div>
+                                                <div>
+                                                    <i class="ion-ios-email-outline"></i>
+                                                    <p>info@fici.com.co</p>
+                                                </div>
+                                                <div>
+                                                    <i class="ion-ios-telephone-outline"></i>
+                                                    <p>+573054813575</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-8">
+                                            <div class="form">
+                                                <div id="sendmessage">Su mensaje ha sido enviado</div>
+                                                <div id="errormessage"></div>
+                                                <form action="" method="post" role="form" class="contactForm">
+                                                    <div class="form-row">
+                                                        <div class="form-group col-lg-6">
+                                                            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre"/>
+                                                            <div class="validation"></div>
+                                                        </div>
+                                                        <div class="form-group col-lg-6">
+                                                            <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Favor digite un correo valido" />
+                                                            <div class="validation"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-msg="Favor digite un asunto" />
+                                                        <div class="validation"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Favor escriba su inquietud o mensaje" placeholder="Mensaje"></textarea>
+                                                        <div class="validation"></div>
+                                                    </div>
+                                                    <div class="text-center"><button type="submit" title="Send Message">Enviar mensaje</button></div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                        
-                            <div class="form-group">
-                                <label for="formGroupExampleInput2"><b>SELECCIONE TIPO DE PAGO</b></label><br/>
-                                <input type="radio" name="pago" id="pago" value="Efectivo"> Efectivo</input><br />
-                                <input type="radio" name="pago" id="pago" value="PayU" disabled="false"> PayU *no disponible por el momento*</input>
+                            </section>
+                        </main>
+                        <footer id="footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 text-lg-left text-center">
+                                        <div class="credits">
+                                            
+                                            With love By <a href="https://www.facebook.com/indigodreamer.1111" target="_blank"><strong>Indigo</strong></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+                                            <a href="#">Aviso de privacidad</a>
+                                            <a href="#">Términos y condiciones</a>
+                                        </nav>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                            <label for="formGroupExampleInput2"><b>DESEEA INCORPORAR DIRECCION REGISTRADA</b></label><br/>
-                            <select class="custom-select" id="camb" >
-                            <div class="inputDiv">
-                                        <option value="1">SI</option>
-                                        <option value="2">NO</option>
-                                    </select>
-                                    <br/><div id="dir"></div>
-                                    <input type="text" id="direccio" name="direccio" class="form-control" readonly="readonly" name="direccion" value="<?php echo $_SESSION['Direccion']; ?>"></input>
-
-                                    <br/><div id="ciu"></div>
-                                <select class="custom-select" disabled="disabled" id="ciud" name="ciud">
-                                    <option value="Bogota"    <?php if($_SESSION['Ciudad'] == 'Bogota'){    ?> selected <?php }?>>Bogotá</option>
-                                    <option value="Chia"      <?php if($_SESSION['Ciudad'] == 'Chia'){      ?> selected <?php }?>>Chía</option>
-                                    <option value="Cota"      <?php if($_SESSION['Ciudad'] == 'Cota'){      ?> selected <?php }?>>Cota</option>
-                                    <option value="Cogua"     <?php if($_SESSION['Ciudad'] == 'Cogua'){     ?> selected <?php }?>>Cogua</option>
-                                    <option value="Sopo"      <?php if($_SESSION['Ciudad'] == 'Sopo'){      ?> selected <?php }?>>Sopó</option>
-                                    <option value="Tabio"     <?php if($_SESSION['Ciudad'] == 'Tabio'){     ?> selected <?php }?>>Tabio</option>
-                                    <option value="Togancipa" <?php if($_SESSION['Ciudad'] == 'Togancipa'){ ?> selected <?php }?>>Tocancipá</option>
-                                    <option value="Zipaquira" <?php if($_SESSION['Ciudad'] == 'Zipaquira'){ ?> selected <?php }?>>Zipaquirá</option>
-                                </select>
-
-                                <br/><div id="bar"></div>
-                                    <input type="text" id="barri" name="barri" class="form-control" readonly="readonly" name="barri" value="<?php echo $_SESSION['Barrio']; ?>"></input>
-
-                                <br/><div id="ref"></div>
-                                <textarea class="form-control" id="refer" name="refer" name="refer" readonly="readonly" value="<?php echo $_SESSION['Referencias']; ?>" rows="5" data-rule="required" data-msg="Favor escriba referencias del sector"><?php echo $_SESSION['Referencias']; ?></textarea>
-                           </div>
-                           </div>
-                           </div>
-
-                           <script type="text/javascript">//SCRIPT PARA GUARDAR
-                           var elInpu = document.querySelector('#camb');
-                           var direcc=document.querySelector('#direccio');
-                           var ciudad=document.querySelector('#ciud');
-                           var barrio=document.querySelector('#barri');
-                           var referencias=document.querySelector('#refer');
-                       
-                           if(elInpu)
-                           {
-                            dir.innerHTML="<b>DIRECCIÓN ACTUAL:</b>";
-                            ciu.innerHTML="<b>CIUDAD ACTUAL:</b>";
-                            bar.innerHTML="<b>BARRIO ACTUAL:</b>";
-                            ref.innerHTML="<b>REFERENCIAS DEL SECTOR ACTUALES:</b>";
-                            elInpu.addEventListener('input', function() {
-                                if(elInpu.value=="1"){
-                                    //Direccion
-                                    direcc.value="<?php echo $_SESSION['Direccion']; ?>";
-                                    direcc.setAttribute("readonly" , "readonly" , false);
-                                    dir.innerHTML="<b>DIRECCIÓN ACTUAL:</b>";
-                                    //Ciudad
-                                    ciudad.setAttribute("disabled" , "disabled" , false);
-                                    ciu.innerHTML="<b>CIUDAD ACTUAL:</b>";
-                                    //Barrio
-                                    barrio.value="<?php echo $_SESSION['Barrio']; ?>";
-                                    barrio.setAttribute("readonly" , "readonly" , false);
-                                    bar.innerHTML="<b>BARRIO ACTUAL:</b>";
-                                    //Referencias
-                                    referencias.value="<?php echo $_SESSION['Referencias']; ?>";
-                                    referencias.setAttribute("readonly" , "readonly" , false);
-                                    ref.innerHTML="<b>REFERENCIAS DEL SECTOR ACTUALES:</b>";
-                                }
-                                else
-                                {
-                                    //Direccion
-                                    direcc.value="";
-                                    direcc.removeAttribute("readonly"  , false);
-                                    dir.innerHTML="<b>NUEVA DIRECCIÓN:</b>";
-                                    //Ciudad
-                                    ciudad.removeAttribute("disabled"  , false);
-                                    ciu.innerHTML="<b>NUEVA CIUDAD:</b>";
-                                    //Barrio
-                                    barrio.value="";
-                                    barrio.removeAttribute("readonly"  , false);
-                                    bar.innerHTML="<b>NUEVO BARRIO:</b>";
-                                    //Referencias
-                                    referencias.value="";
-                                    referencias.removeAttribute("readonly"  , false);
-                                    ref.innerHTML="<b>NUEVAS REFERENCIAS DEL SECTOR:</b>";
-                                }
-                           }, false);
-                        }
+                        </footer>
+                        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+                        <script src="lib/jquery/jquery.min.js"></script>
+                        <script src="lib/jquery/jquery-migrate.min.js"></script>
+                        <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+                        <script src="lib/easing/easing.min.js"></script>
+                        <script src="lib/wow/wow.min.js"></script>
+                        <script src="lib/superfish/hoverIntent.js"></script>
+                        <script src="lib/superfish/superfish.min.js"></script>
+                        <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+                        <script src="contactform/contactform.js"></script>
+                        <script src="js/main.js"></script>
+                        <script type="text/javascript" src="js/Date/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+                        <script type="text/javascript" src="js/Date/bootstrap/js/bootstrap.min.js"></script>
+                        <script type="text/javascript" src="js/Date/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+                        <script type="text/javascript" src="js/Date/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+                        <script type="text/javascript">
+                        $('.form_datetime').datetimepicker({
+                        //language:  'fr',
+                        weekStart: 1,
+                        todayBtn:  1,
+                        autoclose: 1,
+                        todayHighlight: 1,
+                        startView: 2,
+                        forceParse: 0,
+                        showMeridian: 1
+                        });
+                        $('.form_date').datetimepicker({
+                        language:  'es',
+                        weekStart: 1,
+                        todayBtn:  1,
+                        autoclose: 1,
+                        todayHighlight: 1,
+                        startView: 2,
+                        minView: 2,
+                        forceParse: 0
+                        });
+                        $('.form_time').datetimepicker({
+                        language:  'es',
+                        weekStart: 1,
+                        todayBtn:  1,
+                        autoclose: 1,
+                        todayHighlight: 1,
+                        startView: 1,
+                        minView: 0,
+                        maxView: 1,
+                        forceParse: 0
+                        });
                         </script>
-
-                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:2.5em;">Enviar</button>
-                    </form>
-
-                </div>
-
-            </div>
-        </section><!-- #about -->
-        <?php
-        }
-        ?>
-
-
-
-        <section id="contact">
-            <div class="container">
-                <div class="row wow fadeInUp">
-
-                    <div class="col-lg-4 col-md-4">
-                        <div class="contact-about">
-                            <h3>Fici</h3>
-                            <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam
-                                phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat
-                                mauris nunc congue.</p>
-                            <div class="social-links">
-                                <a href="https://wa.me/573054813575?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20agendar%20una%20terapia%20de"
-                                    class="twitter"><i class="fa fa-whatsapp"></i></a>
-                                <a href="https://www.facebook.com/ficiadomicilio/" class="facebook"><i class="fa fa-facebook"></i></a>
-                                <a href="https://www.instagram.com/ficiadomicilio/" class="instagram"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4">
-                        <div class="info">
-                            <div>
-                                <i class="ion-ios-location-outline"></i>
-                                <p>En cualquier lugar<br></p>
-                            </div>
-
-                            <div>
-                                <i class="ion-ios-email-outline"></i>
-                                <p>fici@gmail.com</p>
-                            </div>
-
-                            <div>
-                                <i class="ion-ios-telephone-outline"></i>
-                                <p>+573054813575</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 col-md-8">
-                        <div class="form">
-                            <div id="sendmessage">Su mensaje ha sido enviado</div>
-                            <div id="errormessage"></div>
-                            <form action="" method="post" role="form" class="contactForm">
-                                <div class="form-row">
-                                    <div class="form-group col-lg-6">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" />
-                                        <div class="validation"></div>
-                                    </div>
-                                    <div class="form-group col-lg-6">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Correo"
-                                            data-rule="email" data-msg="Favor digite un correo valido" />
-                                        <div class="validation"></div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto"
-                                        data-msg="Favor digite un asunto" />
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" data-rule="required"
-                                        data-msg="Favor escriba su inquietud o mensaje" placeholder="Message"></textarea>
-                                    <div class="validation"></div>
-                                </div>
-                                <div class="text-center"><button type="submit" title="Send Message">Enviar mensaje</button></div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 text-lg-left text-center">
-
-                    <div class="credits">
-                        FICI &copy; Todos Los Derechos Reservados
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/superfish/hoverIntent.js"></script>
-    <script src="lib/superfish/superfish.min.js"></script>
-    <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-
-
-    <script src="contactform/contactform.js"></script>
-
-    <script src="js/main.js"></script>
-
-    <script type="text/javascript" src="js/Date/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
-    <script type="text/javascript" src="js/Date/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/Date/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-    <script type="text/javascript" src="js/Date/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
-    <script type="text/javascript">
-        $('.form_datetime').datetimepicker({
-            //language:  'fr',
-            weekStart: 1,
-            todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        forceParse: 0,
-            showMeridian: 1
-        });
-      $('.form_date').datetimepicker({
-            language:  'es',
-            weekStart: 1,
-            todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        minView: 2,
-        forceParse: 0
-        });
-      $('.form_time').datetimepicker({
-            language:  'es',
-            weekStart: 1,
-            todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 1,
-        minView: 0,
-        maxView: 1,
-        forceParse: 0
-        });
-    </script>
-    <!--==========================
-  Boton Whatsapp
-  ============================-->
-    <a class='flotante' href='https://api.whatsapp.com/send?phone=573054813575&text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20agendar%20una%20terapia%20de&source=&data='><b style="padding:10px; background:white; color:black;border-radius: 20px;">CONTACTANOS YA !</b><img
-            src="https://rushdiensten.nl/images/icons/WhatsApp_Icon.png" alt="" style="width:80px;"></i></a>
-
-  
-</body>
-
-</html>
+                        <!--==========================
+                        Boton Whatsapp
+                        ============================-->
+                        <a class='flotante' href='https://api.whatsapp.com/send?phone=573054813575&text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20agendar%20una%20terapia%20de&source=&data='><b style="padding:10px; background:white; color:black;border-radius: 20px;">CONTACTANOS YA !</b><img
+                        src="https://rushdiensten.nl/images/icons/WhatsApp_Icon.png" alt="" style="width:80px;"></i></a>
+                        
+                    </body>
+                </html>
