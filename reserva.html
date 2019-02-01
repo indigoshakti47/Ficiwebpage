@@ -20,7 +20,6 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
             <link rel="stylesheet" href="css/style2.css">
             <link rel="stylesheet" href="css/whatsapp.css">
-
             
         </head>
         <body>
@@ -151,243 +150,244 @@
                                                         <br/><div id="ref"></div>
                                                         <textarea class="form-control" id="refer" name="refer" name="refer" readonly="readonly" value="<?php echo $_SESSION['Referencias']; ?>" rows="5" data-rule="required" data-msg="Favor escriba referencias del sector"><?php echo $_SESSION['Referencias']; ?></textarea>
                                                     </div>
-                                                
-                                                <li>
-                                                <button class="next-btn next-btn2" type="button">Next</button>
-                                            </li>
-                                            </div>
-                                            <script type="text/javascript">//SCRIPT PARA GUARDAR
-                                            var elInpu = document.querySelector('#camb');
-                                            var direcc=document.querySelector('#direccio');
-                                            var ciudad=document.querySelector('#ciud');
-                                            var barrio=document.querySelector('#barri');
-                                            var referencias=document.querySelector('#refer');
-                                            
-                                            if(elInpu)
-                                            {
-                                            dir.innerHTML="<b>DIRECCIÓN ACTUAL:</b>";
-                                            ciu.innerHTML="<b>CIUDAD ACTUAL:</b>";
-                                            bar.innerHTML="<b>BARRIO ACTUAL:</b>";
-                                            ref.innerHTML="<b>REFERENCIAS DEL SECTOR ACTUALES:</b>";
-                                            elInpu.addEventListener('input', function() {
-                                            if(elInpu.value=="1"){
-                                            //Direccion
-                                            direcc.value="<?php echo $_SESSION['Direccion']; ?>";
-                                            direcc.setAttribute("readonly" , "readonly" , false);
-                                            dir.innerHTML="<b>DIRECCIÓN ACTUAL:</b>";
-                                            //Ciudad
-                                            ciudad.setAttribute("disabled" , "disabled" , false);
-                                            ciu.innerHTML="<b>CIUDAD ACTUAL:</b>";
-                                            //Barrio
-                                            barrio.value="<?php echo $_SESSION['Barrio']; ?>";
-                                            barrio.setAttribute("readonly" , "readonly" , false);
-                                            bar.innerHTML="<b>BARRIO ACTUAL:</b>";
-                                            //Referencias
-                                            referencias.value="<?php echo $_SESSION['Referencias']; ?>";
-                                            referencias.setAttribute("readonly" , "readonly" , false);
-                                            ref.innerHTML="<b>REFERENCIAS DEL SECTOR ACTUALES:</b>";
-                                            }
-                                            else
-                                            {
-                                            //Direccion
-                                            direcc.value="";
-                                            direcc.removeAttribute("readonly"  , false);
-                                            dir.innerHTML="<b>NUEVA DIRECCIÓN:</b>";
-                                            //Ciudad
-                                            ciudad.removeAttribute("disabled"  , false);
-                                            ciu.innerHTML="<b>NUEVA CIUDAD:</b>";
-                                            //Barrio
-                                            barrio.value="";
-                                            barrio.removeAttribute("readonly"  , false);
-                                            bar.innerHTML="<b>NUEVO BARRIO:</b>";
-                                            //Referencias
-                                            referencias.value="";
-                                            referencias.removeAttribute("readonly"  , false);
-                                            ref.innerHTML="<b>NUEVAS REFERENCIAS DEL SECTOR:</b>";
-                                            }
-                                            }, false);
-                                            }
-                                            </script>
-                                            <!-- Info dirección -->
-                                            
-                                        </ul>
-                                    </div>
-                                    <!-- Tercera pantalla -->
-                                    
-                                    <div class="tab-pane" id="step3">
-                                        <ul>
-                                            <li>
-                                                <div class="form-group">
-                                                    <label for="formGroupExampleInput2N"><b>SELECCIONE TIPO DE PAGO</b></label><br/>
-                                                    <label>Efectivo</label><input type="radio" name="">
-                                                    <label>PayU</label><input type="radio" name="">
-                                                    </input>
+                                                    
+                                                    <li>
+                                                        <button class="next-btn next-btn2" type="button">Next</button>
+                                                    </li>
                                                 </div>
-                                                <label>CÓDIGO DE DESCUENTO</label>
-                                                <div class="errorTxt"></div>
-                                                <input type="text" name="bf_fullname">
-                                            </li>
-                                            
-                                            
-                                            <li>
-                                                <button class="submit-btn" type="submit">Enviar</button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--Fin pantallas -->
-                                    
-                                    <div class="progress-wrap">
-                                        <div class="line-progress-bar">
-                                            <div class="line"></div>
-                                            <ul class="checkout-bar">
-                                                <li class="progressbar-dots active"><span>step 1</span></li>
-                                                <li class="progressbar-dots"><span>step 2</span></li>
-                                                <li class="progressbar-dots"><span>Final step</span></li>
+                                                <script type="text/javascript">//SCRIPT PARA GUARDAR
+                                                var elInpu = document.querySelector('#camb');
+                                                var direcc=document.querySelector('#direccio');
+                                                var ciudad=document.querySelector('#ciud');
+                                                var barrio=document.querySelector('#barri');
+                                                var referencias=document.querySelector('#refer');
+                                                
+                                                if(elInpu)
+                                                {
+                                                dir.innerHTML="<b>DIRECCIÓN ACTUAL:</b>";
+                                                ciu.innerHTML="<b>CIUDAD ACTUAL:</b>";
+                                                bar.innerHTML="<b>BARRIO ACTUAL:</b>";
+                                                ref.innerHTML="<b>REFERENCIAS DEL SECTOR ACTUALES:</b>";
+                                                elInpu.addEventListener('input', function() {
+                                                if(elInpu.value=="1"){
+                                                //Direccion
+                                                direcc.value="<?php echo $_SESSION['Direccion']; ?>";
+                                                direcc.setAttribute("readonly" , "readonly" , false);
+                                                dir.innerHTML="<b>DIRECCIÓN ACTUAL:</b>";
+                                                //Ciudad
+                                                ciudad.setAttribute("disabled" , "disabled" , false);
+                                                ciu.innerHTML="<b>CIUDAD ACTUAL:</b>";
+                                                //Barrio
+                                                barrio.value="<?php echo $_SESSION['Barrio']; ?>";
+                                                barrio.setAttribute("readonly" , "readonly" , false);
+                                                bar.innerHTML="<b>BARRIO ACTUAL:</b>";
+                                                //Referencias
+                                                referencias.value="<?php echo $_SESSION['Referencias']; ?>";
+                                                referencias.setAttribute("readonly" , "readonly" , false);
+                                                ref.innerHTML="<b>REFERENCIAS DEL SECTOR ACTUALES:</b>";
+                                                }
+                                                else
+                                                {
+                                                //Direccion
+                                                direcc.value="";
+                                                direcc.removeAttribute("readonly"  , false);
+                                                dir.innerHTML="<b>NUEVA DIRECCIÓN:</b>";
+                                                //Ciudad
+                                                ciudad.removeAttribute("disabled"  , false);
+                                                ciu.innerHTML="<b>NUEVA CIUDAD:</b>";
+                                                //Barrio
+                                                barrio.value="";
+                                                barrio.removeAttribute("readonly"  , false);
+                                                bar.innerHTML="<b>NUEVO BARRIO:</b>";
+                                                //Referencias
+                                                referencias.value="";
+                                                referencias.removeAttribute("readonly"  , false);
+                                                ref.innerHTML="<b>NUEVAS REFERENCIAS DEL SECTOR:</b>";
+                                                }
+                                                }, false);
+                                                }
+                                                </script>
+                                                <!-- Info dirección -->
+                                                
                                             </ul>
                                         </div>
+                                        <!-- Tercera pantalla -->
+                                        
+                                        <div class="tab-pane" id="step3">
+                                            <ul>
+                                                <li>
+                                                    <div class="form-group">
+                                                        <label><b>SELECCIONE TIPO DE PAGO</b></label><br/>
+                                                        <label>Efectivo</label>
+                                                        <label>Efectivo</label><input type="radio" name="RadioEfectivo">
+                                                        <label>PayU</label><input type="radio" name="RadiopayU">
+                                                        </input>
+                                                    </div>
+                                                    <label>CÓDIGO DE DESCUENTO</label>
+                                                    <div class="errorTxt"></div>
+                                                    <input type="text" name="bf_fullname">
+                                                </li>
+                                                
+                                                
+                                                
+                                                <li>
+                                                    <button class="submit-btn" type="submit">Enviar</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--Fin pantallas -->
+                                        
+                                        <div class="progress-wrap">
+                                            <div class="line-progress-bar">
+                                                <div class="line"></div>
+                                                <ul class="checkout-bar">
+                                                    <li class="progressbar-dots active"><span>step 1</span></li>
+                                                    <li class="progressbar-dots"><span>step 2</span></li>
+                                                    <li class="progressbar-dots"><span>Final step</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="loader" style="display: none;">
+                                            <img src="//d2erq0e4xljvr7.cloudfront.net/assets/img/ring.svg">
+                                        </div>
+                                    </form>
+                                </div>
+                                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js'></script>
+                                <script  src="js/index.js"></script>
+                                <section id="contact">
+                                    <div class="container">
+                                        <div class="row wow fadeInUp">
+                                            <div class="col-lg-4 col-md-4">
+                                                <div class="contact-about">
+                                                    <h3>Fici</h3>
+                                                    <p>Si tienes alguna duda, ponemos a tú disposición un equipo de profesionales en Fisioterapia que resolverá tus inquietudes, comunícate con nosotros por nuestros diferentes canales y responderemos en la mayor brevedad posible.</p>
+                                                    <div class="social-links">
+                                                        <a href="https://wa.me/573054813575?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20agendar%20una%20terapia%20de" class="twitter" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                                                        <a href="https://www.facebook.com/ficiadomicilio/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                                        <a href="https://www.instagram.com/ficiadomicilio/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-4">
+                                                <div class="info">
+                                                    <div>
+                                                        <i class="ion-ios-location-outline"></i>
+                                                        <p>En cualquier lugar<br></p>
+                                                    </div>
+                                                    <div>
+                                                        <i class="ion-ios-email-outline"></i>
+                                                        <p>info@fici.com.co</p>
+                                                    </div>
+                                                    <div>
+                                                        <i class="ion-ios-telephone-outline"></i>
+                                                        <p>+573054813575</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-8">
+                                                <div class="form">
+                                                    <div id="sendmessage">Su mensaje ha sido enviado</div>
+                                                    <div id="errormessage"></div>
+                                                    <form action="" method="post" role="form" class="contactForm">
+                                                        <div class="form-row">
+                                                            <div class="form-group col-lg-6">
+                                                                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre"/>
+                                                                <div class="validation"></div>
+                                                            </div>
+                                                            <div class="form-group col-lg-6">
+                                                                <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Favor digite un correo valido" />
+                                                                <div class="validation"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-msg="Favor digite un asunto" />
+                                                            <div class="validation"></div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Favor escriba su inquietud o mensaje" placeholder="Mensaje"></textarea>
+                                                            <div class="validation"></div>
+                                                        </div>
+                                                        <div class="text-center"><button type="submit" title="Send Message">Enviar mensaje</button></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    
-                                    <div id="loader" style="display: none;">
-                                        <img src="//d2erq0e4xljvr7.cloudfront.net/assets/img/ring.svg">
-                                    </div>
-                                </form>
-                            </div>
-                            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-                            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js'></script>
-                            <script  src="js/index.js"></script>
-
-                            <section id="contact">
+                                </section>
+                            </main>
+                            <footer id="footer">
                                 <div class="container">
-                                    <div class="row wow fadeInUp">
-                                        <div class="col-lg-4 col-md-4">
-                                            <div class="contact-about">
-                                                <h3>Fici</h3>
-                                                <p>Si tienes alguna duda, ponemos a tú disposición un equipo de profesionales en Fisioterapia que resolverá tus inquietudes, comunícate con nosotros por nuestros diferentes canales y responderemos en la mayor brevedad posible.</p>
-                                                <div class="social-links">
-                                                    <a href="https://wa.me/573054813575?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20agendar%20una%20terapia%20de" class="twitter" target="_blank"><i class="fa fa-whatsapp"></i></a>
-                                                    <a href="https://www.facebook.com/ficiadomicilio/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                                                    <a href="https://www.instagram.com/ficiadomicilio/" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-                                                </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 text-lg-left text-center">
+                                            <div class="credits">
+                                                
+                                                With love By <a href="https://www.facebook.com/indigodreamer.1111" target="_blank"><strong>Indigo</strong></a>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-4">
-                                            <div class="info">
-                                                <div>
-                                                    <i class="ion-ios-location-outline"></i>
-                                                    <p>En cualquier lugar<br></p>
-                                                </div>
-                                                <div>
-                                                    <i class="ion-ios-email-outline"></i>
-                                                    <p>info@fici.com.co</p>
-                                                </div>
-                                                <div>
-                                                    <i class="ion-ios-telephone-outline"></i>
-                                                    <p>+573054813575</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-5 col-md-8">
-                                            <div class="form">
-                                                <div id="sendmessage">Su mensaje ha sido enviado</div>
-                                                <div id="errormessage"></div>
-                                                <form action="" method="post" role="form" class="contactForm">
-                                                    <div class="form-row">
-                                                        <div class="form-group col-lg-6">
-                                                            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre"/>
-                                                            <div class="validation"></div>
-                                                        </div>
-                                                        <div class="form-group col-lg-6">
-                                                            <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Favor digite un correo valido" />
-                                                            <div class="validation"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-msg="Favor digite un asunto" />
-                                                        <div class="validation"></div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Favor escriba su inquietud o mensaje" placeholder="Mensaje"></textarea>
-                                                        <div class="validation"></div>
-                                                    </div>
-                                                    <div class="text-center"><button type="submit" title="Send Message">Enviar mensaje</button></div>
-                                                </form>
-                                            </div>
+                                        <div class="col-lg-6">
+                                            <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+                                                <a href="#">Aviso de privacidad</a>
+                                                <a href="#">Términos y condiciones</a>
+                                            </nav>
                                         </div>
                                     </div>
                                 </div>
-                            </section>
-                        </main>
-                        <footer id="footer">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-6 text-lg-left text-center">
-                                        <div class="credits">
-                                            
-                                            With love By <a href="https://www.facebook.com/indigodreamer.1111" target="_blank"><strong>Indigo</strong></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-                                            <a href="#">Aviso de privacidad</a>
-                                            <a href="#">Términos y condiciones</a>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </footer>
-                        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-                        <script src="lib/jquery/jquery.min.js"></script>
-                        <script src="lib/jquery/jquery-migrate.min.js"></script>
-                        <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-                        <script src="lib/easing/easing.min.js"></script>
-                        <script src="lib/wow/wow.min.js"></script>
-                        <script src="lib/superfish/hoverIntent.js"></script>
-                        <script src="lib/superfish/superfish.min.js"></script>
-                        <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-                        <script src="contactform/contactform.js"></script>
-                        <script src="js/main.js"></script>
-                        <script type="text/javascript" src="js/Date/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
-                        <script type="text/javascript" src="js/Date/bootstrap/js/bootstrap.min.js"></script>
-                        <script type="text/javascript" src="js/Date/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-                        <script type="text/javascript" src="js/Date/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
-                        <script type="text/javascript">
-                        $('.form_datetime').datetimepicker({
-                        //language:  'fr',
-                        weekStart: 1,
-                        todayBtn:  1,
-                        autoclose: 1,
-                        todayHighlight: 1,
-                        startView: 2,
-                        forceParse: 0,
-                        showMeridian: 1
-                        });
-                        $('.form_date').datetimepicker({
-                        language:  'es',
-                        weekStart: 1,
-                        todayBtn:  1,
-                        autoclose: 1,
-                        todayHighlight: 1,
-                        startView: 2,
-                        minView: 2,
-                        forceParse: 0
-                        });
-                        $('.form_time').datetimepicker({
-                        language:  'es',
-                        weekStart: 1,
-                        todayBtn:  1,
-                        autoclose: 1,
-                        todayHighlight: 1,
-                        startView: 1,
-                        minView: 0,
-                        maxView: 1,
-                        forceParse: 0
-                        });
-                        </script>
-                        <!--==========================
-                        Boton Whatsapp
-                        ============================-->
-                        <a class='flotante' href='https://api.whatsapp.com/send?phone=573054813575&text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20agendar%20una%20terapia%20de&source=&data='><b style="padding:10px; background:white; color:black;border-radius: 20px;">CONTACTANOS YA !</b><img
-                        src="https://rushdiensten.nl/images/icons/WhatsApp_Icon.png" alt="" style="width:80px;"></i></a>
-                        
-                    </body>
-                </html>
+                            </footer>
+                            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+                            <script src="lib/jquery/jquery.min.js"></script>
+                            <script src="lib/jquery/jquery-migrate.min.js"></script>
+                            <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+                            <script src="lib/easing/easing.min.js"></script>
+                            <script src="lib/wow/wow.min.js"></script>
+                            <script src="lib/superfish/hoverIntent.js"></script>
+                            <script src="lib/superfish/superfish.min.js"></script>
+                            <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+                            <script src="contactform/contactform.js"></script>
+                            <script src="js/main.js"></script>
+                            <script type="text/javascript" src="js/Date/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+                            <script type="text/javascript" src="js/Date/bootstrap/js/bootstrap.min.js"></script>
+                            <script type="text/javascript" src="js/Date/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+                            <script type="text/javascript" src="js/Date/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+                            <script type="text/javascript">
+                            $('.form_datetime').datetimepicker({
+                            //language:  'fr',
+                            weekStart: 1,
+                            todayBtn:  1,
+                            autoclose: 1,
+                            todayHighlight: 1,
+                            startView: 2,
+                            forceParse: 0,
+                            showMeridian: 1
+                            });
+                            $('.form_date').datetimepicker({
+                            language:  'es',
+                            weekStart: 1,
+                            todayBtn:  1,
+                            autoclose: 1,
+                            todayHighlight: 1,
+                            startView: 2,
+                            minView: 2,
+                            forceParse: 0
+                            });
+                            $('.form_time').datetimepicker({
+                            language:  'es',
+                            weekStart: 1,
+                            todayBtn:  1,
+                            autoclose: 1,
+                            todayHighlight: 1,
+                            startView: 1,
+                            minView: 0,
+                            maxView: 1,
+                            forceParse: 0
+                            });
+                            </script>
+                            <!--==========================
+                            Boton Whatsapp
+                            ============================-->
+                            <a class='flotante' href='https://api.whatsapp.com/send?phone=573054813575&text=%C2%A1Hola%21%20Me%20gustar%C3%ADa%20agendar%20una%20terapia%20de&source=&data='><b style="padding:10px; color:black;border-radius: 20px;"></b><img
+                            src="https://rushdiensten.nl/images/icons/WhatsApp_Icon.png" alt="" id="originalbitches" style="width:80px;"></i></a>
+                            
+                        </body>
+                    </html>
